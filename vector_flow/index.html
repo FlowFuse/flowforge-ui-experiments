@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
+        <script src="./vector_flow.js"></script>
+        <link rel="stylesheet" href="common.css"> 
+    </head>
+    <body>
+        <main>
+            <div id="canvas-container"></div>
+            <div id="controls">
+                <h1>Simulation</h1>
+                <div class="control-row">
+                    <label>NO_PARTICLES:</label>
+                    <input id="no_particles" type="text" onchange="update()"/>
+                </div>
+                <div class="control-row">
+                    <label>SPEED:</label>
+                    <input id="speed" type="text" onchange="update()"/>
+                </div>
+                <div class="control-row">
+                    <label>DECAY:</label>
+                    <input id="decay" type="text" onchange="update()"/>
+                </div>
+                <div class="control-row">
+                    <label>MAX_AGE:</label>
+                    <input id="sim_maxage" type="text" onchange="update()"/>
+                </div>
+                <div class="control-row action-row">
+                    <button onclick="pauseAnimation()">Pause</button>
+                    <button onclick="playAnimation()">Play</button>
+                </div>
+                <h1>Visuals</h1>
+                <div class="control-row">
+                    <label>LINE_WIDTH:</label>
+                    <input id="line_width" type="text" onchange="update()"/>
+                </div>
+                <div class="control-row action-row">
+                    <button onclick="resetCanvas()">Reset Canvas</button>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
