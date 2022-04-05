@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js" integrity="sha512-+Ru50BzEpZjlFzVnjSmJfYFPFfY2hS0Kjlu/IvqaJoux7maF5lJrRVUJWJ2LevPls7rd242GLbWEt+zAo4OVVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script src="./line_clouds.js"></script>
+        <link rel="stylesheet" href="common.css"> 
+    </head>
+    <body>
+        <main>
+            <div id="canvas-container">
+                <div id="output"></div>
+            </div>
+            <div id="controls">
+                <h1>Simulation</h1>
+                <div class="control-row">
+                    <label>SEED:</label>
+                    <input id="seed" type="text" />
+                </div>
+                <h1>Colours</h1>
+                <div class="control-row">
+                    <label>Color A:</label>
+                    <input id="colorA" type="text" value="#EEEEEE" onchange="updateColor('colorA')" />
+                    <span id="colorAprev" class="color-preview"></span>
+                </div>
+                <div class="control-row">
+                    <label>Color B:</label>
+                    <input id="colorB" type="text" value="#ED4E4E" onchange="updateColor('colorB')" />
+                    <span id="colorBprev" class="color-preview"></span>
+                </div>
+                <div class="control-row">
+                    <label>Color C:</label>
+                    <input id="colorC" type="text" value="#1F2937" onchange="updateColor('colorC')" />
+                    <span id="colorCprev" class="color-preview"></span>
+                </div>
+                <div class="control-row">
+                    <label>Color D:</label>
+                    <input id="colorD" type="text" value="#2DB2B8" onchange="updateColor('colorD')" />
+                    <span id="colorDprev" class="color-preview"></span>
+                </div>
+                <div class="control-row">
+                    <label>Number of paths:</label>
+                    <input id="numPaths" type="text" value="10" onchange="updateNumPaths()" />
+                </div>
+                <!-- <div class="control-row action-row">
+                    <button onclick="pauseAnimation()">Pause</button>
+                    <button onclick="playAnimation()">Play</button>
+                </div> -->
+                <!-- <h1>Visuals</h1>
+                <div class="control-row">
+                    <label>LINE_WIDTH:</label>
+                    <input id="line_width" type="text" onchange="update()"/>
+                </div> -->
+                <div class="control-row action-row">
+                    <button onclick="update()">Generate</button>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
